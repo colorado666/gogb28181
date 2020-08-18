@@ -1,10 +1,10 @@
-#### usage
+#### Usage
 
-有如下几个子命令用于测试：
+运行程序，进入交互试shell，输入要打开的子应用：
 
+有如下几个子应用：
 传输层：tcps、tcpc、udps、udpc
-tu层：uas 和 uac 
-
+TU层：uas 和 uac 
 
 ```
 ➜  gogb28181 go run main.go
@@ -25,6 +25,7 @@ Commands:
 ```
 
 
+
 #### 说明1
 
 对比了很多sip库的实现，有的与标准sip差距太大，有的实现的太复杂。osip2比较容易懂。所以这个代码参考（抄袭）的osip2 和 exosip2的相关实现。比如状态机的对应管理连函数名都没改。
@@ -40,7 +41,8 @@ Commands:
 sip协议的实现github上其实有好几个go库了，但都实现的过于复杂了。所以我这边重新造了个轮子，毕竟go造轮子太简单了。
 
 ```
-Implementations MUST be able to process multiple header field rows with the same name in any combination of the single-value-per-line or comma-separated value forms.
+Implementations MUST be able to process multiple header field rows with the same name in any combination of the 
+single-value-per-line or comma-separated value forms.
 ```
 上面是RFC3261的内容。
 因为gb28181对于sip的使用也是很初级的（我的理解），并且后续扩展的话也很方便。
